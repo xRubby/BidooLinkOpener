@@ -2,6 +2,13 @@
 
 Questo script automatizza il login e l'apertura di link da un file di testo su **Bidoo**, un sito di aste online. Utilizza Selenium WebDriver per interagire con il sito e può essere facilmente configurato per operazioni di scraping o navigazione automatica.
 
+## Funzionalità
+
+- **Login automatico**: Accede al sito di **Bidoo** utilizzando le credenziali fornite.
+- **Verifica del login**: Controlla se il login è riuscito verificando la presenza di un elemento specifico.
+- **Estrazione di URL**: Estrae i link da un file di testo e verifica che siano URL validi.
+- **Apertura dei link**: Apre i link uno alla volta, con una pausa casuale tra 2 e 3 secondi per evitare richieste troppo veloci.
+
 ## Requisiti
 
 Per eseguire questo script, è necessario avere i seguenti prerequisiti:
@@ -52,10 +59,3 @@ Per eseguire questo script, è necessario avere i seguenti prerequisiti:
     ```
 
 Lo script eseguirà automaticamente il login su **Bidoo** utilizzando le credenziali fornite nel file `.env`, verificherà se il login è stato effettuato correttamente, e aprirà ogni link presente nel file `links.txt`.
-
-## Funzionalità
-
-- **Login automatico**: Accede al sito di **Bidoo** utilizzando le credenziali fornite.
-- **Verifica del login**: Controlla se il login è riuscito verificando la presenza di un elemento specifico.
-- **Estrazione di URL**: Estrae i link da un file di testo e verifica che siano URL validi.
-- **Apertura dei link**: Apre i link uno alla volta, con una pausa casuale tra 2 e 3 secondi per evitare richieste troppo veloci.
