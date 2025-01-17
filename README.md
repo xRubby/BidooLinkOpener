@@ -9,6 +9,10 @@ Questo script automatizza il login e l'apertura di link da un file di testo su *
 - **Estrazione di URL**: Estrae i link da un file di testo e verifica che siano URL validi.
 - **Apertura dei link**: Apre i link uno alla volta, con una pausa casuale tra 2 e 3 secondi per evitare richieste troppo veloci.
 
+## Problemi noti
+
+- **CAPTCHA**: Se il sito **Bidoo** presenta un CAPTCHA durante il login o l'interazione con i link, lo script potrebbe non funzionare correttamente. Il CAPTCHA richiede l'intervento manuale per confermare che l'utente è un essere umano, impedendo la corretta automazione del processo.
+
 ## Requisiti
 
 Per eseguire questo script, è necessario avere i seguenti prerequisiti:
