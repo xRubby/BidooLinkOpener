@@ -38,8 +38,8 @@ Per eseguire questo script, è necessario avere i seguenti prerequisiti:
 5. Crea un file `.env` nella directory principale del progetto e aggiungi le seguenti variabili di ambiente:
 
     ```
-    EMAIL=tuo_email@example.com
-    PASSWORD=tuo_password
+    EMAIL=tua_email@example.com
+    PASSWORD=tua_password
     ```
 
 ## Come Usare
