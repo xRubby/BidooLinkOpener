@@ -73,15 +73,9 @@ class Bidoo():
         return links
 
     def is_url(self, text):
-        """Verifica se la stringa è un URL valido."""
+        """Verifica se la stringa è un URL valido di Bidoo."""
         regex = re.compile(
-            r'^(?:http|ftp)s?://' # schema
-            r'(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+(?:[A-Z]{2,6}\.?|[A-Z0-9-]{2,}\.?)|' # dominio
-            r'localhost|' # localhost
-            r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|' # indirizzo IP
-            r'\[?[A-F0-9]*:[A-F0-9:]+\]?)' # IPv6
-            r'(?::\d+)?' # porta
-            r'(?:/?|[/?]\S+)$', re.IGNORECASE)
+            r'^(https?://(?:www\.)?(?:it\.)?bidoo\.com(?:[^\s]*)$)', re.IGNORECASE)
         return re.match(regex, text) is not None
 
     def open_links(self, links):
