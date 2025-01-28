@@ -80,10 +80,14 @@ class Bidoo():
 
     def open_links(self, links):
         """Apre i link uno per uno, aspettando 2-3 secondi tra un link e l'altro."""
+        n=1
+        linkSize=len(links)
         for link in links:
             self.driver.get(link)
+            print(f"Link {n} di {linkSize}")
+            i+=1
             time.sleep(2 + (time.time() % 1))  # Pausa casuale tra 2 e 3 secondi
-
+            
     def teardown_method(self, method):
         input("Premi Enter per chiudere il browser...")
         self.driver.quit()
