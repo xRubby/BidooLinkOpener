@@ -85,7 +85,7 @@ class Bidoo():
         for link in links:
             self.driver.get(link)
             print(f"Link {n} di {linkSize}")
-            i+=1
+            n+=1
             time.sleep(2 + (time.time() % 1))  # Pausa casuale tra 2 e 3 secondi
             
     def teardown_method(self, method):
