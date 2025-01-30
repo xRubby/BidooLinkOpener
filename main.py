@@ -1,7 +1,6 @@
 import time
 import re
 import os
-import json
 from dotenv import load_dotenv
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -60,14 +59,13 @@ class Bidoo():
         except Exception as e:
             print(f"Errore durante la verifica del login: Utente non loggato")
             return False  # Login fallito
-
+        
     def extract_links_from_file(self, filename):
         """Estrai solo i link dal file di testo, ignorando il testo non URL."""
-        with open(filename, 'r') as file:
+        with open(filename, 'r', encoding='utf-8') as file:
             lines = file.readlines()
         links = []
         for line in lines:
-            line = line.strip()
             if self.is_url(line):
                 links.append(line)
         return links
