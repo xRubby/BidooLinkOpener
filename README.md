@@ -44,7 +44,7 @@ Per eseguire questo script, è necessario avere i seguenti prerequisiti:
     pip install -r requirements.txt
     ```
 
-4. Scarica il [Microsoft Edge WebDriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) compatibile con la tua versione di Edge, e aggiungilo al tuo PATH.
+4. Scarica il [Microsoft Edge WebDriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) compatibile con la tua versione di Edge.
 
 5. Crea un file `.env` nella directory principale del progetto e aggiungi le seguenti variabili di ambiente:
 
