@@ -85,6 +85,11 @@ class Bidoo():
             print(f"Link {n} di {linkSize}")
             n+=1
             time.sleep(2 + (time.time() % 1))  # Pausa casuale tra 2 e 3 secondi
+    
+    def saldo_bids(self):
+        saldo_element = self.driver.find_element(By.ID, "divSaldoBidMobile")
+        saldo = saldo_element.text
+        return int(saldo)
             
     def teardown_method(self, method):
         input("Premi Enter per chiudere il browser...")
@@ -99,11 +104,19 @@ if __name__ == "__main__":
         bidoo.teardown_method(None)
         exit()
 
+    saldo_old=bidoo.saldo_bids()
+
     #Pausa di 5 secondi
     time.sleep(5)
 
     # Estrai e apri i link
     links = bidoo.extract_links_from_file('links.txt')
     bidoo.open_links(links)
+
+    saldo_new = bidoo.saldo_bids()
+
+    print(f"\n\nSaldo puntate precedente: {saldo_old}\n"
+          f"Saldo nuovo: {saldo_new}\n\n"
+          f"Puntate ricevute: {saldo_new-saldo_old}\n\n")
     
     bidoo.teardown_method(None)
