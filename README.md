@@ -19,7 +19,6 @@ Per eseguire questo script, è necessario avere i seguenti prerequisiti:
 
 - **Python 3.x**
 - **Selenium**
-- **Edge WebDriver**
 - **dotenv** per gestire le variabili d'ambiente
 
 ## Installazione
@@ -44,9 +43,7 @@ Per eseguire questo script, è necessario avere i seguenti prerequisiti:
     pip install -r requirements.txt
     ```
 
-4. Scarica il [Microsoft Edge WebDriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) compatibile con la tua versione di Edge.
-
-5. Crea un file `.env` nella directory principale del progetto e aggiungi le seguenti variabili di ambiente:
+4. Crea un file `.env` nella directory principale del progetto e aggiungi le seguenti variabili di ambiente:
 
     ```
     EMAIL=tua_email@example.com
